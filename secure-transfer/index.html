@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Secure File Transfer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>🔒 Secure File Transfer</h1>
+  <div class="container">
+    <div class="box">
+      <h2>👤 Người Gửi</h2>
+      <button id="generateKeys">🔑 Tạo cặp khóa RSA</button>
+      <label>Public Key (Người Gửi):</label>
+      <textarea id="senderPublicKey" readonly></textarea>
+      <label>Private Key (Người Gửi):</label>
+      <textarea id="senderPrivateKey" readonly></textarea>
+      <label>Public Key Người Nhận (PEM):</label>
+      <textarea id="receiverPublicKey"></textarea>
+      <input type="file" id="fileInput">
+      <button id="sendFile">📤 Gửi File</button>
+    </div>
+
+    <div class="box">
+      <h2>🖥️ Server Trung Gian</h2>
+      <label>Log:</label>
+      <textarea id="log" readonly></textarea>
+    </div>
+
+    <div class="box">
+      <h2>👤 Người Nhận</h2>
+      <h2>📋 Bản mã:</h2>
+      <textarea id="result" readonly></textarea>
+      <label>Private Key Người Nhận (PEM):</label>
+      <textarea id="receiverPrivateKey"></textarea>
+      <button id="receiveFile">📥 Nhận File</button>
+      <label>Nội dung File:</label>
+      <textarea id="fileContent" readonly></textarea>
+    </div>
+  </div>
+
+  
+
+  <script src="app.js"></script>
+</body>
+</html>
